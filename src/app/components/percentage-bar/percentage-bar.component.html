@@ -1,0 +1,4 @@
+<div class="bar" [ngStyle]="{ 'width.px': width, 'height.px': height, 'border-radius.px': height/2, 'background-color': barDimColor }">
+    <div class="progress" [ngStyle]="{ 'background-color': color, 'height.px': height, 'width': percentage + '%' }"></div>
+</div>
+<span>{{percentage}}</span>

@@ -1,0 +1,164 @@
+@import '../../../styles'
+
+\:host
+    display: flex
+    background-color: #f8f8fc
+
+#main-container
+    flex-grow: 1
+    padding: 20px 10px
+    display: flex
+    font-family: 'Roboto'
+    flex-direction: column
+    min-height: 100vh
+
+    #welcome-section
+        padding: 30px
+        border-radius: 20px
+        background-color: $light-blue
+
+        .title
+            font-size: 30px
+            color: $dark-blue
+            font-weight: 400
+            margin: 0 0 10px 0
+
+        .message
+            font-size: 16px
+            font-weight: 300
+            color: $dark-blue
+
+    #calendar-section
+        margin: 40px 0
+        border-bottom: 1px solid #e9e9e9
+
+        .week-title
+            color: $dark-gray
+            display: flex
+            align-items: center
+
+            i
+                font-size: 16px
+                margin-right: 10px
+
+            span
+                font-size: 18px
+                font-weight: 300
+
+        .week-days
+            list-style: none
+            display: flex
+            margin: 20px 0
+            justify-content: space-between
+            padding: 0 20px
+
+            li
+                display: flex
+                flex-direction: column
+                align-items: center
+                transition: all .3s
+                top: 0
+                width: 50px
+                padding: 12px 0
+                border-radius: 10px
+                position: relative
+
+                .day-of-week
+                    font-weight: 400
+                    font-size: 14px
+                    color: #444
+
+                .day-of-month
+                    color: #aaa
+                    font-size: 16px
+                    margin-top: 20px
+
+                &:hover
+                    background-color: #f25767
+                    cursor: pointer
+                    top: -5px
+                    box-shadow: 0 4px 10px rgba(242, 87, 103, 0.64)
+                    .day-of-month, .day-of-week
+                        color: #fff
+
+    #results
+        display: flex
+
+        .latest
+            width: 400px
+            border-radius: 8px
+            border: 1px solid #e9e9e9
+            padding: 20px 20px 0 20px
+
+            .title
+                display: flex
+                justify-content: space-between
+                align-items: center
+
+                h1
+                    font-size: 15px
+                    color: $dark-gray
+                    margin: 0
+
+                span
+                    display: flex
+                    align-items: center
+                    font-size: 13px
+                    color: $light-gray
+
+                    i
+                        font-size: 20px
+                        font-style: normal
+                        margin-left: 10px
+
+            ul
+                list-style: none
+                margin: 0
+                padding: 0
+
+                li
+                    font-size: 12px
+                    color: #666
+                    display: flex
+                    justify-content: space-between
+                    padding: 20px 0
+
+                    &:not(:last-child)
+                        border-bottom: 1px solid #e9e9e9
+
+#settings
+    margin: 10px
+    flex-grow: 0.5
+    font-family: 'Roboto'
+    display: flex
+    flex-direction: column
+
+    .header
+        display: flex
+        flex-direction: row-reverse
+        align-items: center
+        padding: 20px 0
+
+        .material-icons
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 30px
+            height: 30px
+            font-size: 24px
+            color: #666666
+
+        .header-item
+            margin: 0 8px
+
+        #avatar
+            width: 45px
+            height: 45px
+            border-radius: 8px
+            background-color: $light-blue
+
+    #other-functions
+        margin-top: 20px
+        border-radius: 20px
+        flex-grow: 1
+        background-color: #ebebf5

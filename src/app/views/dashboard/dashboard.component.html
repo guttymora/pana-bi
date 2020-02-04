@@ -1,0 +1,66 @@
+<!-- MAIN MENU -->
+<main-menu
+    [items]="[
+        {icon: 'emoji_people', link: 'clients'},
+        {icon: 'style', link: 'coupons'},
+        {icon: 'room_service', link: 'petitions'},
+        {icon: 'tune', link: 'settings'}
+    ]">
+</main-menu>
+
+<!-- DASHBOARD: MAIN CONTAINER -->
+<div id="main-container">
+    <div id="welcome-section">
+        <h1 class="title">¡Hola Gustavo!</h1>
+        <span class="message">Qué bueno verte de vuelta.</span>
+    </div>
+
+    <div id="calendar-section">
+        <div class="week-title">
+            <i class="material-icons">calendar_today</i>
+            <span>{{currentMonth}} {{ currentWeek[0]['dayOfMonth'] }} - {{ currentWeek[6]['dayOfMonth'] }}</span>
+        </div>
+
+        <ul class="week-days">
+            <li *ngFor="let day of currentWeek">
+                <span class="day-of-week">{{ day['dayOfWeek'] }}</span>
+                <span class="day-of-month">{{ day['dayOfMonth'] }}</span>
+            </li>
+        </ul>
+    </div>
+
+    <div id="results">
+        <div class="latest">
+            <div class="title">
+                <h1>Últimos resultados</h1>
+                <span>Ver más <i>🠖</i></span>
+            </div>
+
+            <ul>
+                <li>
+                    <span>Nuevos usuarios</span>
+                    <percentage-bar [color]="'#f25767'" [percentage]="33" [width]="80" [height]="5"></percentage-bar>
+                </li>
+                <li>
+                    <span>Cupones canjeados</span>
+                    <percentage-bar [color]="'#f25767'" [percentage]="80" [width]="80" [height]="5"></percentage-bar>
+                </li>
+                <li>
+                    <span>Nuevas suscripciones</span>
+                    <percentage-bar [color]="'#f25767'" [percentage]="65" [width]="80" [height]="5"></percentage-bar>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- OTHER FUNCTIONS -->
+<div id="settings">
+    <div class="header">
+        <div id="avatar" class="header-item"></div>
+        <i class="material-icons header-item">notifications_none</i>
+        <i class="material-icons header-item">tune</i>
+    </div>
+
+    <div id="other-functions"></div>
+</div>
